@@ -46,7 +46,7 @@ app.listen(PORT, () => {
   console.log('Press Ctrl+C to quit.');
 });
 
-function showTweets(tweets) {
+var showTweets = function(tweets) {
   var output = "";
   tweets.statuses.forEach(function(status) {
     console.log(status);
