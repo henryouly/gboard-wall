@@ -15,7 +15,8 @@ router.get('/', (req, res) => {
   var params = {
     q: 'gboard',
     count: 100,
-    result_type: 'recent'
+    result_type: 'mixed',
+    lang: 'en'
   };
   client.get('search/tweets', params, function(error, tweets, response) {
     if (!error) {
