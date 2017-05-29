@@ -39,6 +39,8 @@ app.get('/', (req, res) => {
   });
 });
 
+app.use(express.static('static'));
+
 // Start the server
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
