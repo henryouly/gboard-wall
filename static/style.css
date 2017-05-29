@@ -62,6 +62,11 @@
   transition: all 1.5s ease-in-out;
 }
 
+.hidden {
+  visibility: hidden;
+  display: none;
+}
+
 body {
   margin: 0;
   padding: 0;

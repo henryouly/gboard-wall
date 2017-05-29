@@ -2,6 +2,8 @@
 <head>
   <title><%= title %></title>
   <link rel="stylesheet" type="text/css" href="style.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./init.js"></script>
 </head>
 <body>
   <div class="bg_photos">
@@ -23,6 +25,16 @@
         <p><%= status.text %></p>
       </div>
     </div>
+  </div>
+  <div class="text hidden">
+    <% tweets.statuses.forEach(function(status) { %>
+      <p><%= status.text %></p>
+    <% }) %>
+  </div>
+  <div class="username hidden">
+    <% tweets.statuses.forEach(function(status) { %>
+      <p><%= status.user.name %></p>
+    <% }) %>
   </div>
 </body>
 </html>
