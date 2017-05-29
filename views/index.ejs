@@ -1,11 +1,14 @@
 <html>
 <head>
   <title><%= title %></title>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
-  <% tweets.statuses.forEach(function(status) { %>
-    <img src="<%= status.user.profile_image_url %>"/>
-    <%= status.user.screen_name %>: <%= status.text %><br>
-  <% }) %>
+  <section id="photos">
+    <% tweets.statuses.forEach(function(status) { %>
+      <img src="<%= status.user.profile_image_url.replace('_normal', '') %>">
+      <!-- <%= status.user.screen_name %>: <%= status.text %><br> -->
+    <% }) %>
+  </div>
 </body>
 </html>
