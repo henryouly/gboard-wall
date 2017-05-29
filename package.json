@@ -22,11 +22,13 @@
     "e2e-test": "samples test deploy"
   },
   "dependencies": {
+    "ejs": "^2.5.6",
     "express": "4.15.2",
     "twitter": "1.7.0"
   },
   "devDependencies": {
-    "@google-cloud/nodejs-repo-tools": "1.4.14"
+    "@google-cloud/nodejs-repo-tools": "1.4.14",
+    "nodemon": "^1.11.0"
   },
   "cloud-repo-tools": {
     "test": {

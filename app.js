@@ -17,28 +17,12 @@
 
 // [START app]
 const express = require('express');
-const secret = require('./secret.js');
+const routes = require('./routes/index');
 
 const app = express();
-
-app.get('/', (req, res) => {
-  var Twitter = require('twitter');
-  var client = new Twitter({
-    consumer_key: secret.consumer_key,
-    consumer_secret: secret.consumer_secret,
-    access_token_key: secret.access_token_key,
-    access_token_secret: secret.access_token_secret
-  });
-  var params = {q: 'gboard'};
-  client.get('search/tweets', params, function(error, tweets, response) {
-    if (!error) {
-      res.status(200).send(showTweets(tweets)).end();
-    } else {
-      res.status(403).send(error).end();
-    }
-  });
-});
-
+app.set('views', './views');
+app.set('view engine', 'ejs');
+app.use('/', routes);
 app.use(express.static('static'));
 
 // Start the server
@@ -48,14 +32,4 @@ app.listen(PORT, () => {
   console.log('Press Ctrl+C to quit.');
 });
 
-var showTweets = function(tweets) {
-  var output = "";
-  tweets.statuses.forEach(function(status) {
-    console.log(status);
-    output = output + '<img src="' + status.user.profile_image_url + '"/>'
-      + status.user.screen_name + ": "
-      + status.text + '<br>\n';
-  });
-  return output;
-}
 // [END app]
