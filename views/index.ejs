@@ -7,12 +7,21 @@
   <div class="bg_photos">
     <% tweets.statuses.forEach(function(status) { %>
       <img src="<%= status.user.profile_image_url.replace('_normal', '') %>">
-      <!-- <%= status.user.screen_name %>: <%= status.text %><br> -->
     <% }) %>
   </div>
   <div class="overlay">
+    <% index = Math.floor(Math.random()*(tweets.statuses.length+1)); %>
+    <% status = tweets.statuses[index] %>
     <div class="review">
-      <p>Test review</p>
+      <div class="profile">
+        <img src="<%= status.user.profile_image_url.replace('_normal', '') %>">
+      </div>
+      <div class="profile_info">
+        <p><%= status.user.name %></p>
+      </div>
+      <div class="comment">
+        <p><%= status.text %></p>
+      </div>
     </div>
   </div>
 </body>

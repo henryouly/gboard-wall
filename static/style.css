@@ -36,12 +36,24 @@
   z-index: 10;
 }
 
+.profile {
+  width: 30%;
+}
+.profile img {
+  width: 80%;
+}
+
+.profile_info {
+  width: 70%;
+  display: inline-block;
+}
+
 .review {
   margin: 70px auto;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  width: 30%;
+  width: 50%;
   position: relative;
   transition: all 1.5s ease-in-out;
 }
@@ -49,4 +61,5 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
 }
