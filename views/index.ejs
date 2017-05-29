@@ -1,0 +1,10 @@
+<html>
+<head>
+  <title><%= title %></title>
+</head>
+<body>
+  <% tweets.statuses.forEach(function(status) { %>
+    <img src="<%= status.user.profile_image_url %>"/>
+    <%= status.user.screen_name %>: <%= status.text %><br>
+  <% }) %>
+</html>
