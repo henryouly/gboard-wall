@@ -11,16 +11,17 @@ Display all recent / popular tweets about Gboard on a full-screen TV wall
 
 Before you can run or deploy the sample, you need to do the following:
 
-1.  Install dependencies:
+Install dependencies:
 
-        npm install
+    npm install
 
 ## Running locally
 
-    npm start
+    npm start    
 
 or
-    nodemon
+
+    nodemon    
 
 ## Deploying to App Engine
 
