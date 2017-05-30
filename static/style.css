@@ -53,6 +53,9 @@
   margin-top: 1rem;
   font-weight: 300;
 }
+.comment {
+  font-size: 1.1rem;
+}
 
 .review {
   margin: 70px auto;
