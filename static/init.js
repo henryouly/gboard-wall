@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("div.overlay > div:gt(0)").hide();
+  $("div.overlay > div:first").slideDown(1500);
   $("div.profile > img").clone().appendTo('div.bg_photos');
 
   setInterval(function() {
