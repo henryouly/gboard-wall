@@ -41,15 +41,11 @@
 }
 .profile img {
   width: 80%;
+  border-radius: 3px;
   padding: 10px 10px 10px 10px;
   box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
   -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
   -moz-box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
-}
-
-.profile_info {
-  width: 70%;
-  display: inline-block;
 }
 
 .review {
@@ -60,11 +56,6 @@
   width: 50%;
   position: relative;
   transition: all 1.5s ease-in-out;
-}
-
-.hidden {
-  visibility: hidden;
-  display: none;
 }
 
 body {

@@ -1,14 +1,14 @@
-const timeout = 10000;
-var randomTweet = function() {
-  console.log("randomTweet");
-  var images = $(".bg_photos img");
-  var index = Math.floor(Math.random() * (images.length + 1));
-  $("div.profile img").attr('src', images.eq(index).attr('src'));
-  $("div.profile_info p").text(images.eq(index).attr('alt'));
-  $("div.comment p").text($(".text p").eq(index).text());
-  setTimeout(randomTweet, timeout);
-}
-
 $(document).ready(function() {
-  setTimeout(randomTweet, timeout);
+  $("div.overlay > div:gt(0)").hide();
+  $("div.profile > img").clone().appendTo('div.bg_photos');
+
+  setInterval(function() {
+    $('div.overlay > div:first')
+      // .fadeOut(1000)
+      .hide()
+      .next()
+      .fadeIn(1000)
+      .end()
+      .appendTo('div.overlay');
+  }, 3000);
 });
