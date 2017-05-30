@@ -10,5 +10,5 @@ $(document).ready(function() {
       .slideDown(1500)
       .end()
       .appendTo('div.overlay');
-  }, 5000);
+  }, 8000);
 });
