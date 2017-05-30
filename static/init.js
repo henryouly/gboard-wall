@@ -5,10 +5,10 @@ $(document).ready(function() {
   setInterval(function() {
     $('div.overlay > div:first')
       // .fadeOut(1000)
-      .hide()
+      .slideUp()
       .next()
-      .fadeIn(1000)
+      .slideDown(1500)
       .end()
       .appendTo('div.overlay');
-  }, 3000);
+  }, 5000);
 });
