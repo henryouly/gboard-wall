@@ -12,11 +12,13 @@ router.get('/', (req, res) => {
     access_token_key: secret.access_token_key,
     access_token_secret: secret.access_token_secret
   });
+  var query = req.query.q || 'gboard';
+  var lang = req.query.lang || '';
   var params = {
-    q: 'gboard',
+    q: query,
     count: 100,
     result_type: 'recent',
-    lang: 'en'
+    lang: lang
   };
   client.get('search/tweets', params, function(error, tweets, response) {
     if (!error) {
