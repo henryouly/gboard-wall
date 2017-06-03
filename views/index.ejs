@@ -13,7 +13,7 @@
     <% tweets.statuses.forEach(function(status) { %>
     <div class="review">
       <div class="profile">
-        <img src="<%= status.user.profile_image_url.replace('_normal', '') %>">
+        <img src="<%= status.user.profile_image_url.replace('_normal', '_400x400') %>">
       </div>
       <div class="profile_info">
         <p><%= status.user.name %></p>
