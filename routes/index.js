@@ -1,6 +1,6 @@
 'use strict';
 
-const secret = require('../secret');
+const secret = require('../secret_heroku');
 const express = require('express');
 const router = express.Router();
 
