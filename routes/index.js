@@ -14,6 +14,7 @@ router.get('/', (req, res) => {
   });
   var query = req.query.q || 'gboard';
   var lang = req.query.lang || '';
+  var debug = req.query.debug || false;
   var params = {
     q: query,
     count: 100,
@@ -22,7 +23,7 @@ router.get('/', (req, res) => {
   };
   client.get('search/tweets', params, function(error, tweets, response) {
     if (!error) {
-      res.render('index', {
+      res.render(debug ? 'debug' : 'index', {
         title: 'Tweets - Gboard',
         tweets: tweets
       });

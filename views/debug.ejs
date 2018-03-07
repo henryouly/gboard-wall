@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title><%= title %></title>
+  <meta http-equiv="refresh" content="900" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="all">
+    <% tweets.statuses.forEach(function(status) { %>
+    <div class="review">
+      <div class="profile_info">
+        <p><%= status.user.name %> <%= status.text %></p>
+      </div>
+      <div class="comment">
+        <p><%- JSON.stringify(status) %></p>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</body>
+</html>

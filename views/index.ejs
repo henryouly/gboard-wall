@@ -10,7 +10,10 @@
   <div class="bg_photos">
   </div>
   <div class="overlay">
+    <% var hashes = new Set(); %>
     <% tweets.statuses.forEach(function(status) { %>
+    <% if (!hashes.has(status.text)) { %>
+    <%   hashes.add(status.text); %>
     <div class="review">
       <div class="profile">
         <img src="<%= status.user.profile_image_url.replace('_normal', '_400x400') %>">
@@ -22,6 +25,7 @@
         <p><%= status.text %></p>
       </div>
     </div>
+    <% } %>
     <% }) %>
   </div>
 </body>
